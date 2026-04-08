@@ -71,7 +71,7 @@ int main() {
         cin >> inputISBN;
 
         if (inputISBN == "0") {
-            cout << "Program ended.\n";
+            cout << "Program finished.\n";
             break;
         }
 
