@@ -130,6 +130,20 @@ int main() {
             cout << "Error: Book not found." << endl;
         }
     }
+    HardcopyBook hardcopy;
+    hardcopy.setBookDetails("Physical C++ Book", "Laura White", "201", true, "2024");
+    hardcopy.setShelfNumber("A12");
+
+    EBook ebook;
+    ebook.setBookDetails("Digital Algorithms", "Mark Green", "301", true, "2024");
+    ebook.setEndOfLicenseDate("2026");
+
+    cout << "\nPhase 2 Book Types:" << endl;
+    hardcopy.displayBookDetails();
+    hardcopy.displayShelfNumber();
+
+    ebook.displayBookDetails();
+    ebook.displayLicenseDate();
 
     cout << "Program ended." << endl;
 
