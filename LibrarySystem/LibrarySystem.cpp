@@ -25,7 +25,7 @@ public:
         cout << "ISBN: " << ISBN << endl;
         cout << "Availability: " << (isAvailable ? "Available" : "Borrowed") << endl;
         cout << "Date Added: " << dateAdd << endl;
-        cout << "----------------------\n";
+        cout << "----------------------" << endl;
     }
 
     string getISBN() {
@@ -35,16 +35,16 @@ public:
     void borrowBook() {
         if (isAvailable) {
             isAvailable = false;
-            cout << "Book borrowed successfully!\n";
+            cout << "Book borrowed successfully!" << endl;
         }
         else {
-            cout << "Error: Book is already borrowed.\n";
+            cout << "Error: Book is already borrowed." << endl;
         }
     }
 
     void returnBook() {
         isAvailable = true;
-        cout << "Book returned successfully!\n";
+        cout << "Book returned successfully!" << endl;
     }
 
     static void sortBookData(Book books[], int size) {
@@ -99,7 +99,9 @@ int main() {
 
     Book::sortBookData(books, 5);
 
-    cout << "Library books sorted by ISBN:\n";
+    cout << "Library books sorted by ISBN:" << endl;
+    cout << "----------------------" << endl;
+
     for (int i = 0; i < 5; i++) {
         books[i].displayBookDetails();
     }
@@ -125,9 +127,11 @@ int main() {
         }
 
         if (!found) {
-            cout << "Error: Book not found.\n";
+            cout << "Error: Book not found." << endl;
         }
     }
+
+    cout << "Program ended." << endl;
 
     return 0;
 }
